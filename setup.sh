@@ -135,6 +135,9 @@ cd ..
 pip install -vv --no-deps --force-reinstall .
 pip install -vv --no-deps --force-reinstall .
 
+echo "Copying objects..."
+mv src/*.so $CONDA_PREFIX/lib/python3.8/site-packages/emopt
+
 if [ $? -eq 0 ]
 then
     echo "Succesfully installed EMopt!. Exiting."

@@ -247,15 +247,15 @@ class DomainCoordinates(object):
             The grid spacing along z
         """
 
-        ilist = np.arange(i1, i2, 1, dtype=np.int)
+        ilist = np.arange(i1, i2, 1, dtype=np.int64)
         self._z = dz * ilist.astype(np.double)
         self._i = slice(i1, i2)
 
-        jlist = np.arange(j1, j2, 1, dtype=np.int)
+        jlist = np.arange(j1, j2, 1, dtype=np.int64)
         self._y = dy * jlist.astype(np.double)
         self._j = slice(j1, j2)
 
-        klist = np.arange(k1, k2, 1, dtype=np.int)
+        klist = np.arange(k1, k2, 1, dtype=np.int64)
         self._x = dx * klist.astype(np.double)
         self._k = slice(k1, k2)
 
